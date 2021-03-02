@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Learning About Nodes</title>
+
+    <style>
+        .clock {
+            border: 2px solid black;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        button {
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+  <h1>Personal Clock</h1>
+  
+  <div class = "clock">
+    <p> Time </p>
+    <p id="demo"></p>
+    <button onclick="clearInterval(myVar)">Stop time</button>
+  </div>
+
+    <script>
+        var myVar = setInterval(myTimer ,1000);
+
+        function myTimer() {
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+    </script>
+</body>
+
+
+
+
+</html>
